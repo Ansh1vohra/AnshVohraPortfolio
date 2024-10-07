@@ -1,0 +1,93 @@
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;  /* Reduced width of the timeline */
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+  
+  .timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+  }
+  
+  .timeline-item .content {
+    padding: 20px;
+    background-color: #2c3e50;
+    border-radius: 6px;
+    position: relative;
+    color: white;
+  }
+  
+  .timeline-item.left .content {
+    transform: translateX(-20px);
+  }
+  
+  .timeline-item.right .content {
+    transform: translateX(20px);
+  }
+  
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 15px;  /* Reduced size of the circle */
+    height: 15px; /* Reduced size of the circle */
+    background-color: #2c3e50;
+    border: 2px solid #fff;  /* Adjusted the size of the border */
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item.left::before {
+    right: -10px;  /* Adjusted position of the circle */
+  }
+  
+  .timeline-item.right::before {
+    left: -10px;   /* Adjusted position of the circle */
+  }
+  
+  /* Mobile View Adjustments */
+  @media screen and (max-width: 768px) {
+    .timeline::after {
+      display: none;  /* Removes the vertical line in mobile view */
+    }
+    
+    .timeline-item {
+      width: 100%;  /* Makes timeline items full width on mobile */
+    }
+    
+    .timeline-item.left .content, 
+    .timeline-item.right .content {
+      transform: translateX(0);  /* Removes the translation in mobile */
+    }
+    
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+      display: none;  /* Removes the circles in mobile view */
+    }
+    
+    .timeline-item.right {
+      left: 0;  /* Ensures both items are aligned on the left */
+    }
+  }
+  

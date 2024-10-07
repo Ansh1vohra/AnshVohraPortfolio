@@ -1,0 +1,65 @@
+.Scene {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+  }
+  
+  .spline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
+    z-index: 2;
+  }
+  
+  .empty {
+    width:50vw;
+  }
+
+  .IntroContent{
+    font-size: 1.25rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.7rem;
+    width:55vw;
+  }
+
+  .IntroContent h1{
+    font-weight: 700;
+    font-size: 60px;
+  }
+  
+  .fa-2x{
+    font-size: 1.5em;
+  }
+  .icons{
+    align-items: left;
+  }
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .Scene {
+      height: 80vh; /* Adjust height for mobile */
+    }
+  
+    .spline {
+      max-height: 400px; /* Decrease the height of Spline on mobile */
+    }
+  
+    .empty {
+      width: 0%;
+    }
+
+    .IntroContent{
+      width:90vw;
+      font-size: 1rem;
+    }
+
+    .IntroContent h1{
+      font-size: 33px;
+    }
+  }
+  
