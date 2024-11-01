@@ -20,7 +20,7 @@ function Contact() {
   };
 
   return (
-    <div className="container mt-5 mb-3 text-white d-flex"  id="contact">
+    <div className="container mt-5 mb-3 text-white d-flex align-items-center"  id="contact">
       <form onSubmit={handleSubmit} style={{flex:'3 2 0',padding:'3.5rem'}} className=" rounded d-flex flex-column align-items-strech gap-4 flex-1">
         <div className="form-group">
         <h3 className="text-center">Contact Me</h3>

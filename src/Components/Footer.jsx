@@ -13,7 +13,7 @@ function Footer() {
             </p>
           </div>
       <div className="p-3">
-        <div className="d-flex flex-column flex-md-row justify-content-evenly">
+        <div className="d-flex flex-column flex-md-row justify-content-evenly align-items-center">
           <div>
             <h5>Quick Links</h5>
             <ul className="list-unstyled d-flex align-items-center gap-3">

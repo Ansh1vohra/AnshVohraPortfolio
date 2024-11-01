@@ -1,6 +1,6 @@
 .Scene {
     position: relative;
-    height: 90vh;
+    height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,10 @@
   }
   .icons{
     align-items: left;
+    z-index: 3;
   }
+
+
   /* Mobile adjustments */
   @media (max-width: 768px) {
     .Scene {

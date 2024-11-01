@@ -32,7 +32,7 @@ export default function App() {
                 </a>
               </li>
               <li className="mx-2">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
+                <a href="https://x.com/Ansh1Vohra" target="_blank" rel="noopener noreferrer" className="text-white">
                   <i className="fab fa-twitter fa-2x"></i>
                 </a>
               </li>

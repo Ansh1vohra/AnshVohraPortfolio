@@ -10,7 +10,9 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 function App() {
   return (
     <ParallaxProvider>
-
+    <a href="https://wa.me/7015150092" class="whatsapp-button" target="_blank" rel="noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+        </a>
     <div className="App">
         <Header />
         <Home />
