@@ -2,6 +2,7 @@ import Spline from '@splinetool/react-spline';
 import "./Home.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Parallax } from 'react-scroll-parallax';
+import MERN from './Images/MERN-new.png'
 
 
 export default function App() {
@@ -18,8 +19,9 @@ export default function App() {
             <hr />
           </div>
           <h1>WEB DEVELOPER</h1>
-          <div >Hi, I'm Ansh Vohra, a web developer driven by a passion for turning concepts into reality, crafting websites that are visually stunning and technically robust.</div>
-          <div className='my-4 icons'>
+          <p>Hi, I'm <b>Ansh Vohra</b>, a web developer driven by a passion for turning concepts into reality, crafting websites that are visually stunning and technically robust.</p>
+          <img src={MERN} alt="MERN"></img>
+          <div className='my-4 icons'> 
             <ul className="list-unstyled d-flex">
               <li className="mx-2">
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white">

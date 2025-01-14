@@ -39,15 +39,24 @@
     font-size: 1.5em;
   }
   .icons{
+    display: none;
     align-items: left;
   }
   .IntroContent a{
     z-index: 50;
   }
 
+  img{
+    width:200px;
+  }
+
 
   /* Mobile adjustments */
   @media (max-width: 768px) {  
+    .Scene{
+      padding-top: 2vh;
+      padding-bottom: 0;
+    }
     .spline {
       display: none; 
     }
@@ -64,6 +73,9 @@
 
     .IntroContent h1{
       font-size: 33px;
+    }
+    .icons{
+      display: block;
     }
   }
   
