@@ -2,7 +2,7 @@ import React from 'react';
 import './Projects.css';
 // import img1 from "./Images/4380-removebg-preview.png";
 import showCraze from "./Images/Show-Craze.png";
-import blogPlatform from "./Images/blog.png";
+import blogPlatform from "./Images/blog-new.png";
 import deeen from "./Images/deeen.png";
 import joboard from "./Images/joboard.png";
 import { Parallax } from 'react-scroll-parallax';
@@ -22,9 +22,9 @@ function Projects() {
       image: showCraze, // Add image reference
     },
     {
-      name: 'Blog Website Front-End in Next.js',
-      description: 'A Blog Website Front-End on Next.js, using Bootstrap, fetching Blog Data from markdown files.',
-      link: 'https://blog-now-ansh-vohras-projects.vercel.app/',
+      name: 'Blog Platform',
+      description: 'A Blog Website using MERN stack.',
+      link: 'https://blog-platform-ansh-vohras-projects.vercel.app',
       image: blogPlatform, // Add image reference
     },
     {

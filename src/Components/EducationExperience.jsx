@@ -15,7 +15,12 @@ function EducationExperience() {
               <Parallax opacity={[0.5,1]}>
               <div className="content">
                 <h5>Frontend Developer Intern at Jurident</h5>
-                <p><em>August 2024 - Present</em></p>
+                <p><em>August 2024 - October 2024</em></p>
+                <ul>
+                  <li>Designed and developed responsive web applications using React.js and Tailwind CSS.</li>
+                  <li>Implemented interactive features and parallax scrolling effects to enhance user experience.</li>
+                  <li>Collaborated with the team to ensure high-quality, user-centric designs and seamless functionality.</li>
+                </ul>
               </div>
               </Parallax>
             </div>
@@ -28,9 +33,7 @@ function EducationExperience() {
                 <ul>
                   <li>Developed a Job Board website using the MERN stack (MongoDB, Express.js, React, Node.js).</li>
                   <li>Implemented features like job posting, job search, and applicant tracking.</li>
-                  <strong>Key Achievements:</strong>
                   <li>Launched a fully functional job board platform with user authentication and authorization.</li>
-                  <li>Enhanced the platform’s search functionality, resulting in a 40% increase in user engagement.</li>
                 </ul>
               </div>
               </Parallax>
@@ -43,8 +46,6 @@ function EducationExperience() {
                 <p><em>April 2024 (Freelance)</em></p>
                 <ul>
                   <li>Designed and developed an e-commerce website using WordPress and WooCommerce.</li>
-                  <strong>Key Achievements:</strong>
-                  <li>Achieved a 50% increase in sales within the first month of launch.</li>
                 </ul>
               </div>
               </Parallax>
