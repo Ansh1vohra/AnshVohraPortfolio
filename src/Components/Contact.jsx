@@ -22,7 +22,7 @@ function Contact() {
     setResponseMessage("");
 
     try {
-      const response = await fetch("https://jo-board-server.vercel.app/api/users/reciveMail", {
+      const response = await fetch("https://jo-board.vercel.app/api/users/reciveMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
