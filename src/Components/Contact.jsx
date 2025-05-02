@@ -29,7 +29,7 @@ function Contact() {
         },
         body: JSON.stringify({
           email: formData.email,
-          mailBody: `Name: ${formData.name}\nMessage: ${formData.message}`,
+          mailBody: `Name: ${formData.name}\nemail: ${formData.email}\nMessage: ${formData.message}`,
         }),
       });
 
