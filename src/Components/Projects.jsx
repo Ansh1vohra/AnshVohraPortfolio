@@ -1,7 +1,8 @@
 import React from 'react';
 import './Projects.css';
 // import img1 from "./Images/4380-removebg-preview.png";
-import showCraze from "./Images/Show-Craze.png";
+import parkEasy from "./Images/parkeasy.png"
+// import showCraze from "./Images/Show-Craze.png";
 import blogPlatform from "./Images/blog-new.png";
 import deeen from "./Images/deeen.png";
 import joboard from "./Images/joboard.png";
@@ -16,10 +17,10 @@ function Projects() {
       image: joboard, // Add image reference
     },
     {
-      name: 'Show Craze',
-      description: 'An efficient online movie ticket booking system using HTML, CSS, Bootstrap, JavaScript, and Firebase.',
-      link: 'https://avmovieprj.web.app/',
-      image: showCraze, // Add image reference
+      name: 'ParkEasy',
+      description: 'An IoT-based smart parking system allowing users to reserve parking slots in real-time.',
+      link: 'https://parkeasy-phi.vercel.app/',
+      image: parkEasy, // Add image reference
     },
     {
       name: 'Blog Platform',
@@ -29,7 +30,7 @@ function Projects() {
     },
     {
       name: 'E-Commerce Website for Music Band',
-      description: 'An e-commerce website tailored for a music band using WordPress and WooCommerce.',
+      description: 'An e-commerce website for a music band using WordPress and WooCommerce.',
       link: 'https://deeen.in',
       image: deeen, // Add image reference
     },

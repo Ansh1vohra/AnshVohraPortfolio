@@ -1,93 +1,164 @@
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, #00b8c5, #1a5282);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 10px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  /* opacity: 0; */
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item.left {
+  left: 0;
+  animation-delay: 0.1s;
+}
+
+.timeline-item.right {
+  left: 50%;
+  animation-delay: 0.2s;
+}
+
+.timeline-item .content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .content {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 184, 197, 0.3);
+  border-color: rgba(0, 184, 197, 0.3);
+}
+
+.timeline-item.left .content {
+  margin-right: 30px;
+}
+
+.timeline-item.right .content {
+  margin-left: 30px;
+}
+
+.timeline-header {
+  margin-bottom: 15px;
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.tech-tags {
+  margin-top: 15px;
+}
+
+.tag {
+  background: rgba(0, 184, 197, 0.15);
+  color: #00b8c5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 184, 197, 0.3);
+}
+
+.timeline-item.left::before,
+.timeline-item.right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: #1a5282;
+  border: 3px solid #00b8c5;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.timeline-item.left::before {
+  right: -9px;
+}
+
+.timeline-item.right::before {
+  left: -9px;
+}
+
+
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile View - Remove timeline and dots */
+@media screen and (max-width: 768px) {
   .timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;  /* Reduced width of the timeline */
-    background-color: #fff;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
+    display: none; /* Hide the vertical timeline */
   }
-  
+
   .timeline-item {
-    padding: 20px;
-    position: relative;
-    width: 50%;
+    width: 100%;
+    padding: 15px 20px; /* Adjusted padding */
   }
-  
-  .timeline-item.left {
-    left: 0;
-  }
-  
+
+  .timeline-item.left,
   .timeline-item.right {
-    left: 50%;
+    left: 0; /* Align all items to left */
   }
-  
-  .timeline-item .content {
-    padding: 20px;
-    background-color: #2c3e50;
-    border-radius: 6px;
-    position: relative;
-    color: white;
-  }
-  
-  .timeline-item.left .content {
-    transform: translateX(-20px);
-  }
-  
-  .timeline-item.right .content {
-    transform: translateX(20px);
-  }
-  
+
+  /* Remove the circle markers */
   .timeline-item.left::before,
   .timeline-item.right::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 15px;  /* Reduced size of the circle */
-    height: 15px; /* Reduced size of the circle */
-    background-color: #2c3e50;
-    border: 2px solid #fff;  /* Adjusted the size of the border */
-    border-radius: 50%;
-    z-index: 1;
+    display: none;
   }
-  
-  .timeline-item.left::before {
-    right: -10px;  /* Adjusted position of the circle */
+
+  /* Adjust content margins */
+  .timeline-item .content {
+    margin: 0 !important;
   }
-  
-  .timeline-item.right::before {
-    left: -10px;   /* Adjusted position of the circle */
+
+  /* Make content full width */
+  .timeline-item.left .content,
+  .timeline-item.right .content {
+    margin-right: 0;
+    margin-left: 0;
   }
-  
-  /* Mobile View Adjustments */
-  @media screen and (max-width: 768px) {
-    .timeline::after {
-      display: none;  /* Removes the vertical line in mobile view */
-    }
-    
-    .timeline-item {
-      width: 100%;  /* Makes timeline items full width on mobile */
-    }
-    
-    .timeline-item.left .content, 
-    .timeline-item.right .content {
-      transform: translateX(0);  /* Removes the translation in mobile */
-    }
-    
-    .timeline-item.left::before,
-    .timeline-item.right::before {
-      display: none;  /* Removes the circles in mobile view */
-    }
-    
-    .timeline-item.right {
-      left: 0;  /* Ensures both items are aligned on the left */
-    }
-  }
-  
+}

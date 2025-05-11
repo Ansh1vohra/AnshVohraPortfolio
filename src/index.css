@@ -7,9 +7,11 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(0.33turn, #002d30, #002031, #001b33, #000000);
-  background-size: 400% 400%;
-  animation: GradientBackground 27s ease infinite;
+  background: radial-gradient(circle at 10% 20%,#006683, #004254);
+  /* background: linear-gradient(0.33turn, #00b8c5, #00486e, #1a5282, #00b8c5); */
+  /* background: linear-gradient(0.33turn, #002d30, #002031, #001b33, #000000); */
+  /* background-size: 400% 400%; */
+  /* animation: GradientBackground 27s ease infinite; */
 }
 
 @keyframes GradientBackground { 
